@@ -1,0 +1,4 @@
+setwd ("/home/ayrat/Development/R/net-data-analysis")
+data = scan("data")
+hist(data)
+
