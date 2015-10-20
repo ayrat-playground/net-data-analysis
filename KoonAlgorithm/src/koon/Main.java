@@ -4,16 +4,29 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int k =5;
-        int n =5;
-        double p = 0.75;
+        int k =4;
+        int n =3;
+        double p = 0.5;
         int[][] graph = generateGraph(k,n,p);
+
+        for (int i=0; i<n; i++){
+            for (int j=0; j<graph[i].length; j++) {
+                System.out.println(i + " " + graph[i][j]);
+            }
+
+        }
+
+        System.out.println();
 
 
         Evaluator eval = new Evaluator(n,k,graph);
         int[] res = eval.evaluate();
 
-        System.out.println(graph);
+        for (int i=0; i<k; i++){
+            if (res[i] != -1){
+                System.out.println(res[i] + " " + i);
+            }
+        }
 
     }
 
