@@ -4,6 +4,7 @@ package com.company;
  * Created by ayrat on 10/30/15.
  */
 public class RandomGraphGenerator {
+    int infinity = 999;
     int n;
     double p;
     int[][] graph;
@@ -34,7 +35,7 @@ public class RandomGraphGenerator {
 
                 }
                 else {
-                    graph[i][j]  = 0;
+                    graph[i][j]  = infinity;
                 }
 
             }
