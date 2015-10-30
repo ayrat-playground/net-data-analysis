@@ -8,6 +8,7 @@ public class SmallWorld {
     int n;
     int[][] graph;
     int[][] path;
+    double avePath;
 
     public SmallWorld (int[][] graph, int n){
         this.n = n;
@@ -35,6 +36,17 @@ public class SmallWorld {
         }
 
     }
+
+//    public void averagePath(){
+//        avePath = 0;
+//       for (int i=0; i<n;i++){
+//           for (int j=0; j<n; j++){
+//               if (i!=j) {
+//                   avePath = avePath + path[i]
+//               }
+//           }
+//       }
+//    }
 
     public int[][] getPath(){
         return path;

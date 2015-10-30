@@ -46,7 +46,7 @@ public class RandomGraphGenerator {
         for (int i=0; i<n; i++){
             for (int j=0; j<n; j++){
                 if (i!=j){
-                    if ((graph[i][j]==0) && (graph[j][i]==0)){
+                    if ((graph[i][j]==infinity) && (graph[j][i]==infinity)){
                         return false;
                     }
                 }
