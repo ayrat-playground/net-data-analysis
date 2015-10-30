@@ -4,7 +4,7 @@ package com.company;
  * Created by ayrat on 10/30/15.
  */
 public class RandomGraphGenerator {
-    int infinity = 999;
+    int infinity;
     int n;
     double p;
     int[][] graph;
@@ -12,6 +12,7 @@ public class RandomGraphGenerator {
     public RandomGraphGenerator(int n, double p, int max_cost, int min_cost){
         this.n = n;
         this.p = p;
+        this.infinity = max_cost + 1;
         initilizeGraph(max_cost, min_cost);
 
     }

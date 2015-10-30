@@ -5,14 +5,28 @@ public class Main {
     public static void main(String[] args) {
         int n = 10;
         double p = 0.75;
-        RandomGraphGenerator generator = new RandomGraphGenerator(n, p, 1, 1000);
+        int max = 1000;
+        int min = 1;
+
+        RandomGraphGenerator generator = new RandomGraphGenerator(n, p, max, min);
         generator.printGraph();
+        System.out.println();
 
         int[][] graph = generator.getGraph();
-        SmallWorld world = new SmallWorld(graph, n);
+
+        int infinity = max + 1;
+        SmallWorld world = new SmallWorld(graph, n, infinity);
         world.floydwarshall();
-        System.out.println();
         world.printPath();
+        System.out.println();
+
+        world.averagePath();
+        world.averageHarmonicPath();
+
+        double average = world.getAvePath();
+        double harmAverage = world.getAveHarmPath();
+
+        System.out.println(average);
 
     }
 
