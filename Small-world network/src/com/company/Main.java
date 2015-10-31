@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 1000;
         double p = 0.75;
         int max = 1000;
         int min = 1;
@@ -26,7 +26,7 @@ public class Main {
         double average = world.getAvePath();
         double harmAverage = world.getAveHarmPath();
 
-        System.out.println(average);
+        System.out.println(String.valueOf(average)); //+ ' ' + String.valueOf(harmAverage));
 
     }
 

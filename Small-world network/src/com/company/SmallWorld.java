@@ -57,7 +57,8 @@ public class SmallWorld {
         for (int i=0; i<n;i++){
             for (int j=0; j<n; j++){
                 if ((i!=j) && (path[i][j]!=infinity)) {
-                    aveHarmPath = 1/((double)path[i][j]);
+                    aveHarmPath = aveHarmPath + 1.0/((double)path[i][j]);
+
                 }
             }
         }

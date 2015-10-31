@@ -19,10 +19,10 @@ public class RandomGraphGenerator {
 
     private void initilizeGraph(int max_cost, int min_cost){
         graph = new int[n][n];
-        do {
+
             generateRandomGraph(max_cost, min_cost);
-        }
-        while (!checkIntegrity());
+        checkIntegrity(max_cost, min_cost);
+
 
     }
 
@@ -43,17 +43,17 @@ public class RandomGraphGenerator {
         }
     }
 
-    private boolean checkIntegrity(){
+    private void checkIntegrity(int max_cost, int min_cost){
         for (int i=0; i<n; i++){
             for (int j=0; j<n; j++){
                 if (i!=j){
                     if ((graph[i][j]==infinity) && (graph[j][i]==infinity)){
-                        return false;
+                        int cost = min_cost + Double.valueOf(Math.random()*(max_cost-min_cost)).intValue();
+                        graph[i][j]  = cost;
                     }
                 }
             }
         }
-        return true;
     }
 
     public int[][] getGraph(){
