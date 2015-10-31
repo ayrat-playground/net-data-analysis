@@ -3,13 +3,13 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        int n = 1000;
-        double p = 0.75;
+        int n = 100;
+        double p = 0.2;
         int max = 1000;
         int min = 1;
 
         RandomGraphGenerator generator = new RandomGraphGenerator(n, p, max, min);
-        generator.printGraph();
+        //generator.printGraph();
         System.out.println();
 
         int[][] graph = generator.getGraph();
@@ -17,7 +17,7 @@ public class Main {
         int infinity = max + 1;
         SmallWorld world = new SmallWorld(graph, n, infinity);
         world.floydwarshall();
-        world.printPath();
+        //world.printPath();
         System.out.println();
 
         world.averagePath();

@@ -20,8 +20,8 @@ public class RandomGraphGenerator {
     private void initilizeGraph(int max_cost, int min_cost){
         graph = new int[n][n];
 
-            generateRandomGraph(max_cost, min_cost);
-        checkIntegrity(max_cost, min_cost);
+        generateRandomGraph(max_cost, min_cost);
+        //checkIntegrity(max_cost, min_cost);
 
 
     }
@@ -31,12 +31,16 @@ public class RandomGraphGenerator {
         for (int i=0; i<n; i++){
             for (int j=0; j<n; j++){
                 if (Math.random()<p){
-                    int cost = min_cost + Double.valueOf(Math.random()*(max_cost-min_cost)).intValue();
+                    int cost = 1;
                     graph[i][j]  = cost;
 
                 }
                 else {
                     graph[i][j]  = infinity;
+                }
+                if (i==j){
+                    graph[i][j]  = 0;
+
                 }
 
             }
@@ -48,7 +52,7 @@ public class RandomGraphGenerator {
             for (int j=0; j<n; j++){
                 if (i!=j){
                     if ((graph[i][j]==infinity) && (graph[j][i]==infinity)){
-                        int cost = min_cost + Double.valueOf(Math.random()*(max_cost-min_cost)).intValue();
+                        int cost = 1;
                         graph[i][j]  = cost;
                     }
                 }
