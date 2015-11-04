@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        int n = 100;
+        int n = 1000;
         double p = 0.2;
         int max = 1000;
         int min = 1;
