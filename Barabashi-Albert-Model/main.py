@@ -23,6 +23,8 @@ for i in range(seed_size):       #a complete graph
 random.randint(1,total_degree)
 sum=0
 
+print range(seed_size,num_nodes)
+
 for current_node in range(seed_size,num_nodes):    #barabasi generate
 
     nodes_to_connected=[]
